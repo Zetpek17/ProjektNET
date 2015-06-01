@@ -1,0 +1,135 @@
+﻿<Window x:Class="SklepWPF.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="Sklep" Width="750" Height="500">
+    <TabControl Margin="10">
+        <!--Dodawanie produktów-->
+        <TabItem x:Name="Dodaj" FontSize="18" Header="Dodaj produkt">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" FontSize="16" FontWeight="Bold" Text="Dział" />
+                <ScrollViewer Grid.Row="1" Grid.Column="0">
+                    <ListBox x:Name="DepartmentsList" SelectionChanged="DepartmentsListSelectionChanged"/>
+                </ScrollViewer>
+
+                <TextBlock Grid.Row="0" Grid.Column="1" FontSize="16" FontWeight="Bold" Text="Produkt" />
+                <ScrollViewer Grid.Row="1" Grid.Column="1">
+                    <ListBox x:Name="ProductsList" SelectionChanged="ProductsListSelectionChanged"/>
+                </ScrollViewer>
+
+                <ScrollViewer Grid.Row="1" Grid.Column="2">
+                    <StackPanel x:Name="ProductStackPanel" Visibility="Hidden">
+                        <TextBlock x:Name="ProductsInfo" Text="{Binding}" TextWrapping="Wrap"/>
+                        <TextBlock/>
+                        <TextBlock Text="Wybierz ilość:"/>
+                        <Grid>
+                            <Button x:Name="Decrease" Content="  -  " Click="DecreaseNumberOnClick" HorizontalAlignment="Left"/>
+                            <TextBlock x:Name="productsQuantity" Text="{Binding}" HorizontalAlignment="Center"/>
+                            <Button x:Name="Increase" Content="  +  " Click="IncreaseNumberOnClick" HorizontalAlignment="Right"/>
+                        </Grid>
+                        <Button x:Name="AddToCart" Content="Dodaj do koszyka" Click="AddToCartOnClick"/>
+                        <TextBlock x:Name="Added" Text="Produkt został dodany do koszyka" TextWrapping="Wrap" VerticalAlignment="Center" Visibility="Hidden"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+        </TabItem>
+
+
+        <!--Wyświetlenie koszyka-->
+        <TabItem x:Name="Koszyk" FontSize="18" Header="Produkty w koszyku">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" FontSize="16" FontWeight="Bold" Text="Produkty w koszyku:" />
+                <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                    <StackPanel HorizontalAlignment="Left">
+                        <ListBox x:Name="ProductsInCartList" SelectionMode="Multiple"/>
+                        <TextBlock x:Name="Sum" Text="{Binding}"/>
+                    </StackPanel>
+                </ScrollViewer>
+                <Grid Grid.Row="2">
+                    <Button x:Name="RemoveSelected" Content="Usuń wybrane" Click="RemoveSelectedOnClick" HorizontalAlignment="Left"/>
+                    <Button x:Name="RemoveAll" Content="Usuń wszystkie" Click="RemoveAllOnClick" HorizontalAlignment="Right"/>
+                </Grid>
+            </Grid>
+        </TabItem>
+
+
+        <!--Wyświetlanie portfela-->
+        <TabItem x:Name="Portfel" FontSize="18" Header="Pokaż portfel">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" FontSize="16" FontWeight="Bold" Text="Stan portfela:" />
+                <ScrollViewer Grid.Row="1">
+                    <TextBlock x:Name="ViewPortfel" TextWrapping="Wrap" Text="{Binding}"/>
+                </ScrollViewer>
+            </Grid>
+        </TabItem>
+
+
+        <!--Wyświetlenie listy produktów-->
+        <TabItem x:Name="Asortyment" FontSize="18" Header="Lista produktów">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" FontSize="16" FontWeight="Bold" Text="Lista produktów dostępnych w sklepie:" />
+                <ScrollViewer Grid.Row="1">
+                    <StackPanel>
+                        <TextBlock  x:Name="ViewArticles" TextWrapping="Wrap" Text="{Binding}"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+        </TabItem>
+
+
+        <!--Wybór płatności-->
+        <TabItem x:Name="Platnosc" FontSize="18" Header="Zapłać">
+            <Grid x:Name="Buy" Visibility="Visible">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" FontSize="16" FontWeight="Bold" Text="Wybierz płatność:" />
+                <ScrollViewer Grid.Row="1" Grid.Column="0">
+                    <StackPanel>
+                        <RadioButton x:Name="Cash" Content="Gotówka" IsChecked="True"/>
+                        <RadioButton x:Name="Card" Content="Karta"/>
+                        <Button x:Name="Choose" Content="Wybierz" Width="100" Click="ChooseOnClick" HorizontalAlignment="Left"/>
+                        <StackPanel x:Name="CardPay" Visibility="Collapsed">
+                            <TextBlock/>
+                            <TextBlock Text="Podaj pin:"/>
+                            <PasswordBox x:Name="PIN" Width="100" HorizontalAlignment="Left" />
+                            <Button x:Name="OKPIN" Content="OK" Width="100" Click="OkPINOnClick" HorizontalAlignment="Left"/>
+                        </StackPanel>
+                        <StackPanel x:Name="Currency" Visibility="Collapsed">
+                            <TextBlock/>
+                            <TextBlock Text="Wybierz walutę:"/>
+                            <RadioButton x:Name="PLN" Content="PLN" IsChecked="True"/>
+                            <RadioButton x:Name="EUR" Content="EUR"/>
+                            <RadioButton x:Name="USD" Content="USD"/>
+                            <RadioButton x:Name="GBP" Content="GBP"/>
+                            <Button x:Name="OKCurrency" Content="OK" Width="100" Click="OkCurrencyOnClick" HorizontalAlignment="Left"/>
+                        </StackPanel>
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+        </TabItem>
+    </TabControl>
+</Window>

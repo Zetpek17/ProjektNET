@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Sklep xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <NazwaSklep>.:Sklep spożywczy ŻBIK:.</NazwaSklep>
+  <AdresSklep>ul. Nowowiejska 24, Poznań</AdresSklep>
+  <Nip>438-45-16-456</Nip>
+  <Dzialy>
+    <Dzial>
+      <IdDzial>1</IdDzial>
+      <NazwaDzial>Pieczywo</NazwaDzial>
+      <Produkty>
+        <Produkt Typ="ProduktSpozywczy">
+          <Id>1</Id>
+          <Nazwa>Kajzerka</Nazwa>
+          <Cena>0.30</Cena>
+          <Rodzaj>szt</Rodzaj>
+          <Waznosc>3</Waznosc>
+          <Sklad>Mąka pszenna, woda</Sklad>
+        </Produkt>
+        <Produkt Typ="ProduktSpozywczy">
+          <Id>2</Id>
+          <Nazwa>Bagietka</Nazwa>
+          <Cena>1.60</Cena>
+          <Rodzaj>szt</Rodzaj>
+          <Waznosc>4</Waznosc>
+          <Sklad>Mąka pszenna, woda</Sklad>
+        </Produkt>
+        <Produkt Typ="ProduktSpozywczy">
+          <Id>3</Id>
+          <Nazwa>Chleb razowy</Nazwa>
+          <Cena>3.80</Cena>
+          <Rodzaj>szt</Rodzaj>
+          <Waznosc>5</Waznosc>
+          <Sklad>Mąka razowa, ziarna słonecznika, woda</Sklad>
+        </Produkt>
+      </Produkty>
+    </Dzial>
+
+    <Dzial>
+      <IdDzial>2</IdDzial>
+      <NazwaDzial>Nabiał</NazwaDzial>
+      <Produkty>
+        <Produkt Typ="ProduktSpozywczy">
+          <Id>4</Id>
+          <Nazwa>Jogurt owocowy</Nazwa>
+          <Cena>0.90</Cena>
+          <Rodzaj>szt</Rodzaj>
+          <Waznosc>12</Waznosc>
+          <Sklad>Mleko, owoce</Sklad>
+        </Produkt>
+        <Produkt Typ="ProduktSpozywczy">
+          <Id>5</Id>
+          <Nazwa>Masło EXTRA</Nazwa>
+          <Cena>3.60</Cena>
+          <Rodzaj>szt</Rodzaj>
+          <Waznosc>21</Waznosc>
+          <Sklad>Mleko, tłuszcz roślinny</Sklad>
+        </Produkt>
+        <Produkt Typ="ProduktSpozywczy">
+          <Id>6</Id>
+          <Nazwa>Ser żółty</Nazwa>
+          <Cena>25.30</Cena>
+          <Rodzaj>kg</Rodzaj>
+          <Waznosc>7</Waznosc>
+          <Sklad>Mleko</Sklad>
+        </Produkt>
+      </Produkty>
+    </Dzial>
+
+    <Dzial>
+      <IdDzial>3</IdDzial>
+      <NazwaDzial>Wędliny</NazwaDzial>
+      <Produkty>
+        <Produkt Typ="ProduktSpozywczy">
+          <Id>7</Id>
+          <Nazwa>Szynka z indyka</Nazwa>
+          <Cena>23.00</Cena>
+          <Rodzaj>kg</Rodzaj>
+          <Waznosc>12</Waznosc>
+          <Sklad>Mięso z indyka, sól</Sklad>
+        </Produkt>
+        <Produkt Typ="ProduktSpozywczy">
+          <Id>8</Id>
+          <Nazwa>Parówki</Nazwa>
+          <Cena>1.20</Cena>
+          <Rodzaj>szt</Rodzaj>
+          <Waznosc>18</Waznosc>
+          <Sklad>Mięso wieprzowe, woda, sól, białko sojowe</Sklad>
+        </Produkt>
+        <Produkt Typ="ProduktSpozywczy">
+          <Id>9</Id>
+          <Nazwa>Kiełbasa krakowska</Nazwa>
+          <Cena>35.40</Cena>
+          <Rodzaj>kg</Rodzaj>
+          <Waznosc>6</Waznosc>
+          <Sklad>Mięso wieprzowe, woda, sól</Sklad>
+        </Produkt>
+      </Produkty>
+    </Dzial>
+
+    <Dzial>
+      <IdDzial>4</IdDzial>
+      <NazwaDzial>Napoje</NazwaDzial>
+      <Produkty>
+        <Produkt Typ="ProduktSpozywczy">
+          <Id>10</Id>
+          <Nazwa>Woda mineralna 1,5l</Nazwa>
+          <Cena>1.70</Cena>
+          <Rodzaj>szt</Rodzaj>
+          <Waznosc>60</Waznosc>
+          <Sklad>Woda źródlana, mikroelementy</Sklad>
+        </Produkt>
+        <Produkt Typ="ProduktSpozywczy">
+          <Id>11</Id>
+          <Nazwa>Sok jabłkowy 1l</Nazwa>
+          <Cena>4.60</Cena>
+          <Rodzaj>szt</Rodzaj>
+          <Waznosc>7</Waznosc>
+          <Sklad>Woda, przecier jabłkowy, cukier</Sklad>
+        </Produkt>
+        <Produkt Typ="ProduktSpozywczy">
+          <Id>12</Id>
+          <Nazwa>Tyskie 0,5l</Nazwa>
+          <Cena>2.70</Cena>
+          <Rodzaj>szt</Rodzaj>
+          <Waznosc>18</Waznosc>
+          <Sklad>Woda, chmiel, cukier</Sklad>
+        </Produkt>
+      </Produkty>
+    </Dzial>
+
+    <Dzial>
+      <IdDzial>5</IdDzial>
+      <NazwaDzial>Środki Chemiczne</NazwaDzial>
+      <Produkty>
+        <Produkt Typ="ProduktChemiczny">
+          <Id>13</Id>
+          <Nazwa>Proszek do prania</Nazwa>
+          <Cena>36.20</Cena>
+          <Rodzaj>szt</Rodzaj>
+          <Waznosc>720</Waznosc>
+          <Sklad>Sole sodowe, krzemiany, fosforany</Sklad>
+        </Produkt>
+        <Produkt Typ="ProduktChemiczny">
+          <Id>14</Id>
+          <Nazwa>Płyn do naczyń</Nazwa>
+          <Cena>3.50</Cena>
+          <Rodzaj>szt</Rodzaj>
+          <Waznosc>120</Waznosc>
+          <Sklad>Woda, kwas octowy, gliceryna, chlorek sodu</Sklad>
+        </Produkt>
+        <Produkt Typ="ProduktChemiczny">
+          <Id>15</Id>
+          <Nazwa>Domestos 24H</Nazwa>
+          <Cena>7.20</Cena>
+          <Rodzaj>szt</Rodzaj>
+          <Waznosc>300</Waznosc>
+          <Sklad>Chlor, woda, mydło</Sklad>
+        </Produkt>
+      </Produkty>
+    </Dzial>
+
+    <Dzial>
+      <IdDzial>6</IdDzial>
+      <NazwaDzial>Kosmetyki</NazwaDzial>
+      <Produkty>
+        <Produkt Typ="ProduktChemiczny">
+          <Id>16</Id>
+          <Nazwa>Mydło w kostce</Nazwa>
+          <Cena>2.50</Cena>
+          <Rodzaj>szt</Rodzaj>
+          <Waznosc>240</Waznosc>
+          <Sklad>Sód, woda, gliceryna</Sklad>
+        </Produkt>
+        <Produkt Typ="ProduktChemiczny">
+          <Id>17</Id>
+          <Nazwa>Szampon</Nazwa>
+          <Cena>6.20</Cena>
+          <Rodzaj>szt</Rodzaj>
+          <Waznosc>120</Waznosc>
+          <Sklad>Chlorek sodu, gliceryna, woda</Sklad>
+        </Produkt>
+        <Produkt Typ="ProduktChemiczny">
+          <Id>18</Id>
+          <Nazwa>Pasta do zębów</Nazwa>
+          <Cena>9.70</Cena>
+          <Rodzaj>szt</Rodzaj>
+          <Waznosc>80</Waznosc>
+          <Sklad>Fluorek sodu, woda</Sklad>
+        </Produkt>
+      </Produkty>
+    </Dzial>
+
+    <Dzial>
+      <IdDzial>7</IdDzial>
+      <NazwaDzial>RTV/AGD</NazwaDzial>
+      <Produkty>
+        <Produkt Typ="Rtv_agd">
+          <Id>19</Id>
+          <Nazwa>Telewizor SAMSUNG 40</Nazwa>
+          <Cena>2000.00</Cena>
+          <Rodzaj>szt</Rodzaj>
+          <Gwarancja>3</Gwarancja>
+          <NrSeryjny>SA683HS5W2</NrSeryjny>
+        </Produkt>
+        <Produkt Typ="Rtv_agd">
+          <Id>20</Id>
+          <Nazwa>Telefon Sony Ericson 3300</Nazwa>
+          <Cena>250.00</Cena>
+          <Rodzaj>szt</Rodzaj>
+          <Gwarancja>1</Gwarancja>
+          <NrSeryjny>KWH35RD1</NrSeryjny>
+        </Produkt>
+        <Produkt Typ="Rtv_agd">
+          <Id>21</Id>
+          <Nazwa>Mikser Electrolux</Nazwa>
+          <Cena>140.00</Cena>
+          <Rodzaj>szt</Rodzaj>
+          <Gwarancja>2</Gwarancja>
+          <NrSeryjny>WP93JE2N7</NrSeryjny>
+        </Produkt>
+      </Produkty>
+    </Dzial>
+  </Dzialy>
+</Sklep>
